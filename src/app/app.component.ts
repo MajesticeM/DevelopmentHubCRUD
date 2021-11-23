@@ -13,7 +13,7 @@ export class AppComponent {
    this.myArray.push(1);
    console.log(this.myArray);
  }
-Read(SearchItem: number)
+Read(SearchItem: any)
 {
 for (let index = 0; index < this.myArray.length; index++) {
   const element = this.myArray[index];
@@ -22,9 +22,10 @@ for (let index = 0; index < this.myArray.length; index++) {
     return element;
   }
 }
-Update(UpdateName,index: number)
+Update(UpdateName,index)
 {
-
+  this.myArray[index]=this.UpdateName;
+  console.log(this.myArray);
 }
 
 Delete(ArrayItemNumber)
